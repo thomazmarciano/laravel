@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Usuarios;
 use App\Models\Operador;
+use App\Models\Cliente;
 use Psy\Command\WhereamiCommand;
 use SebastianBergmann\Diff\Chunk;
 
@@ -13,9 +14,89 @@ class Main extends Controller
 {
     public function home()
     {
+        // Cliente::find(1)->delete();
+        // $clientes = Cliente::all();
+        // $clientes = Cliente::onlyTrashed()->get();
+
+        // Cliente::withTrashed()->find(5)->forceDelete();
+
+        // $clientes = Cliente::all();
+
+        // dd($clientes);
+
+        // ---Eloquent ORM---
+        // CRUD
+        // Inserir Registro
+        // $cliente = new Cliente();
+        // $cliente->nome = "João";
+        // $cliente->email = "joao@email.com";
+        // $cliente->save();
+        // echo "Inserido!";
+
+
+        // $cliente = Cliente::find(1);
+        // $cliente->nome = "João Silva";
+        // $cliente->save();
+        // echo 'Atualizado';
+
+    //     $cliente = Cliente::find(1);
+    //     $cliente->delete();
+    //     echo 'Deletado';
 
     }
+
+        // $this->inserir();
+
+
+        // Criar Clientes
+        // private function inserir($numClientes = 10)
+        // {
+        //     $nomes = ['joao', 'ana', 'carlos', 'antonio', 'rui', 'maria'];
+        //     $sobrenomes = ['silva', 'oliveira', 'castro', 'martins', 'gomes', 'freitas'];
+        //     $dominios = ['@gmail.com', '@hotmail.com', '@outlook.com'];
+
+        //     $clientes = [];
+        //     for($i = 1; $i <= $numClientes; $i++){
+
+        //         $nome = $nomes[rand(0,count($nomes)-1)];
+        //         $sobrenome = $sobrenomes[rand(0,count($sobrenomes)-1)];
+        //         $email = $nome . '_' . $sobrenome.$dominios[rand(0,count($dominios)-1)];
+        //         array_push($clientes, [ 'nome' => "$nome $sobrenome", 'email' => $email, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')]);
+        //     }
+
+        //     // Limpar tabela de Clientes
+        //     Cliente::truncate();
+
+        //     // Inserir novos clientes
+        //     Cliente::insert($clientes);
+
+        // }
+
+        // $cliente = Cliente::find(5);
+        // $cliente->delete();
+        // echo 'Deletado';
+
+        // Cliente::destroy([1, 3, 100]);
+
+
+        // $cliente = Cliente::find(4);
+        // $cliente->delete();
+
+        // $clientes = CLiente::all();
+        // dd($clientes);
+        // echo 'Ok';
+
+
         // ---Eloquent ORM---
+        // $res = Operador::where('id', '>', 290)->max('pontuacao');
+        // echo $res;
+        // die();
+
+        // echo "$res->nome - $res->email - $res->pontuacao";
+
+        // echo '<pre>';
+        // print_r($res);
+
         // $resultados = Operador::all();
 
         // $resultados = Operador::where('pontuacao', 20)->get();
